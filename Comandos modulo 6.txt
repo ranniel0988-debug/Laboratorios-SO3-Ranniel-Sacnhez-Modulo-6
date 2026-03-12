@@ -1,0 +1,27 @@
+====================================
+
+Practica 3
+
+====================================
+
+sudo apt update
+sudo apt install snort -y
+sudo apt update
+sudo apt install snort -y
+sudo nano /etc/snort/rules/local.rules
+sudo nano /etc/snort/snort.lua
+clear
+sudo
+clear
+sudo snort -c /etc/snort/.lua -
+sudo snort -c /etc/snort/.lua -T
+clear
+sudo snort -c /etc/snort/.lua -T
+sudo systemctl status snort.service
+sudo nano /etc/snort/snort.lua
+sudo snort -c /etc/snort/snort.lua -T
+clear
+sudo snort -c /etc/snort/snort.lua -i ens33 -A alert_fast
+ip a
+sudo snort -c /etc/snort/snort.lua -i ens33 -A alert_fast
+history
