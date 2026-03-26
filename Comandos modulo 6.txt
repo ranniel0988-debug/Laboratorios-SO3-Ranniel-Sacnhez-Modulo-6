@@ -1,5 +1,50 @@
 ====================================
 
+Practica 1
+
+====================================
+sudo apt update
+sudo apt install gnupg2 -y
+mkdir practica_cifradp
+cd practica_cifrado/
+sudo nano practica.txt
+gpg2 -e practica.txt
+ls
+rm practica.txt
+clear
+cat practica.txt.gpg
+nano practica.txt.gpg
+gpg2 -d practica.txt.gpg
+ls
+clear
+
+====================================
+
+Practica 2
+
+====================================
+sudo apt update
+sudo apt install vsftpd
+sudo systemctl status ssh
+sudo systemctl status apache2
+sudo systemctl status vsftpd.service
+sudo ufw allow 21/tcp
+sudo iptables -A INPUT -p tcp --dport 80 -j DROP
+sudo iptables -A INPUT -p tcp --dport 21 -j DROP
+sudo iptables -A INPUT -p tcp --dport 22 -j DROP
+sudo iptables -D INPUT -p tcp --dport 80 -j DROP
+sudo iptables -D INPUT -p tcp --dport 21 -j DROP
+sudo iptables -D INPUT -p tcp --dport 22 -j DROP
+sudo ufw deny 80/tcp
+sudo ufw deny 21/tcp
+sudo ufw deny 22/tcp
+sudo ufw enable
+sudo ufw allow 80/tcp
+sudo ufw allow 21/tcp
+sudo ufw allow 22/tcp
+
+====================================
+
 Practica 3
 
 ====================================
@@ -25,3 +70,15 @@ sudo snort -c /etc/snort/snort.lua -i ens33 -A alert_fast
 ip a
 sudo snort -c /etc/snort/snort.lua -i ens33 -A alert_fast
 history
+
+====================================
+
+Practica 4
+
+====================================
+clear
+sudo apt install libpam-google-authenticator
+google-authenticator
+sudo nano /etc/pam.d/sshd
+sudo nano /etc/ssh/ssh_config
+sudo systemctl restart ssh
