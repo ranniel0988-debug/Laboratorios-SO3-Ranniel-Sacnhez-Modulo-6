@@ -1,6 +1,11 @@
 ====================================
 
-Practica 1
+Practica 1 - Cifrado 1pts
+
+Descargue la herramiente gpg2, instalarla y configurarla 
+Cree un directorio, y dentro un archivo y cifrelo utilizando gpg2
+Intente acceder al archivo cifrado
+Luego decifre el archivo y muestre el contenido del mismo{
 
 ====================================
 sudo apt update
@@ -23,7 +28,13 @@ clear
 
 ====================================
 
-Practica 2
+Practica 2 - IP tables - UFW/Firewall-cmd 1pts
+
+Habilite los servicios de http, ftp y ssh en el servidor, muentre ambos servicios funcionando de manera correcta
+Utilizando IP tables bloquee el trafico del puerto 80, 21 y 22 para bloquear las conexiones hacia ambos servicios muestre los resultados
+Utilizando IP tables habilite nuevamente el trafico del puerto 80, 21 y 22 para permitir las conexiones hacia ambos servicios
+Utilizando ufw (si su distro es basada en debian) o firewall-cmd (si su distro esta basada en Red Hat) bloquee el trafico del puerto 80,21 y 22 para bloquear las conexiones hacia ambos servicios
+Habilite nuevamente el trafico del puerto 80, 21 y 22 para permitir las conexiones hacia ambos servicios.
 
 ====================================
 sudo apt update
@@ -51,7 +62,15 @@ sudo ufw allow 22/tcp
 
 ====================================
 
-Practica 3
+Practica 3 -Instalacion de IDS snort 1pts
+
+Descargue e instale el  IDS snort (Apoyese de la documentacion oficial)
+luego de instalado, cree las siguientes reglas de deteccion de trafico:
+Detectar todo el trafico ICMP (Ping) hacia el host
+Detectar todo el trafico hacia el puerto 21/tcp de ese host
+Detectar todo el trafico hacia el puerto 22/tcp de ese host
+Detectar todo el trafico hacia el puerto 80/tcp de ese host
+Ejecute el IDS, Realize las pruebas desde su maquina host, y muestre como son detectadas por el IDS 
 
 ====================================
 
@@ -86,7 +105,12 @@ history
 
 ====================================
 
-Practica 4
+Practica 4: Configurar 2FA con google authenticator Modulo PAM para Acceso SSH
+
+Instale y Configure Google Authenticator para el usuario que se utilizara para acceder via SSH
+Configure PAM para usar Google Authenticator
+Configure SSH para solicitar 2FA 
+Realize la demostraccion accediendo desde asu Maquina host hasta tu VM (si es exitoso, se te pedirá: Contraseña Código de Google Authenticator, ingrese los datos y el codigo enviado y acceda)
 
 ====================================
 clear
